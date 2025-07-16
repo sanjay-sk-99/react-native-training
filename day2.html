@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="day2.js"></script>
-</head>
-<body>
-    <h1>This is Task for Async & Await</h1>
-    <div id="user" ></div>
-</body>
+    <script src="day2.js" defer></script>
+    <style>
+      .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        padding: 10px;
+        margin: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 25%;
+      }
+      .post {
+        display: flex;
+      }
+      #input{
+        padding: 10px;
+        margin: 10px;
+        border:2px solid blue;
+        border-radius: 5%;
+      }
+      #load {
+        color:green;
+        font-size: large;
+      }
+      #error {
+        color: red;
+        font-size: large;
+      }
+      .show{
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body style="background-color: #f0ece2;">
+    <div class="heading">
+      <h1>This is Task for Async & Await</h1>
+      <h3>User Id : </h3>
+      <input type="number" min="1" id="input" placeholder="enter your user Id" />
+      <button id="btn" class="btn">Get post</button>
+    </div>
+    <div class="show">
+      <p id="load"></p>
+      <p id="error"></p>
+    </div>
+
+    <div id="user"></div>
+  </body>
 </html>
