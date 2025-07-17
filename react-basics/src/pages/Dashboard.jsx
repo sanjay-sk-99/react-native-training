@@ -16,7 +16,8 @@ const Dashboard = () => {
   <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">Welcome to User Portal</h1>
 
   <div className="overflow-x-auto">
-    <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+    {allForm.length === 0 ? (<p className="text-black font-medium">No Data Found</p>):(
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg">
       <thead>
         <tr className="bg-gray-100 text-gray-700 text-left">
           <th className="py-2 px-4 border-b">First Name</th>
@@ -44,6 +45,7 @@ const Dashboard = () => {
         ))}
       </tbody>
     </table>
+    )}
   </div>
 
   <div className="mt-6 text-center">

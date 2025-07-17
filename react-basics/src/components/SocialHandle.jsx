@@ -32,29 +32,6 @@ const SocialHandle = () => {
   };
 
   return (
-    // <div>
-    //   <label>Linkdin :</label>
-    //   <input
-    //     type="text"
-    //     name="linkdin"
-    //     value={formdata.linkdin}
-    //     onChange={hanldechange}
-    //     placeholder="enter your linkdin"
-    //   />
-    //   <br />
-    //   <label>Github Id :</label>
-    //   <input
-    //     type="text"
-    //     name="github"
-    //     value={formdata.github}
-    //     onChange={hanldechange}
-    //     placeholder="enter your github Id"
-    //   />
-    //   <br />
-    //   {error}
-    //   <br />
-    //   <button onClick={handleSubmit}>Submit</button>
-    // </div>
     <div className="w-[400px] mx-auto mt-10 p-6 bg-white shadow-md rounded-md">
       <h1 className="text-gray-700 font-bold text-left">Final Form: </h1>
       <div className="mb-4">
