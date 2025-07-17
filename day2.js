@@ -62,5 +62,6 @@ const fetchData = async (id) => {
 const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
   const input = document.getElementById("input").value;
+  if(!input) return alert("Enter number")
   fetchData(input);
 });
