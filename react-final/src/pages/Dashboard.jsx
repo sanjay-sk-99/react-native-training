@@ -1,4 +1,5 @@
 import React,{Suspense,lazy, useState} from 'react'
+import Loader from '../components/Loader'
 
 const User = lazy(()=>import('../components/User'))
 
@@ -13,7 +14,7 @@ const Dashboard = () => {
 
       <div >
         {show && (
-          <Suspense fallback={<p>loading.....</p>}>
+          <Suspense fallback={<Loader/>}>
             <User />
           </Suspense>
         )}
