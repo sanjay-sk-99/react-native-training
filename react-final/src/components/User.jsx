@@ -2,7 +2,7 @@ import React from "react";
 import UseFetch from "../hooks/UseFetch";
 
 const User = () => {
-  const { data, loading, error } = UseFetch();
+  const { data, loading, error } = UseFetch("https://jsonplaceholder.typicode.com/users");
   return (
     <div>
       {loading ? (

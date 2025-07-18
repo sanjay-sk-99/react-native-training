@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-const UseFetch = () => {
+const UseFetch = (url) => {
+ 
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const fetchData = async () => {
+  const fetchData = async (url) => {
     try {
       setLoading(true);
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
+      const res = await fetch(url);
       if (!res.ok) {
         throw new Error("Network response Error");
       }
@@ -22,7 +23,7 @@ const UseFetch = () => {
   };
 
   useEffect(()=>{
-     fetchData()
+     fetchData(url)
   },[])
   return { data, error, loading };
 };
