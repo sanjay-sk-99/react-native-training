@@ -17,6 +17,7 @@ const UseFetch = (url) => {
       setData(resdata);
       setLoading(false)
     } catch (err) {
+      setLoading(false)
       console.log(err.message);
       setError("Error fetching data : " + err.message)
     }
