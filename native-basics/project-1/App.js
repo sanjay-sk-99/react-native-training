@@ -13,7 +13,7 @@ export default function App() {
   'v', 'w', 'x', 'y', 'z'
 ];
 
-const mapped = letters.map((val,i)=>({letterText:val,key:i}))
+const mapped = letters.map((val,i)=>({letterText:val,key:i.toString()}))
 
  
 
@@ -38,7 +38,7 @@ const mapped = letters.map((val,i)=>({letterText:val,key:i}))
        <FlatList
         data={mapped}
         renderItem={({item})=><Text style={styles.text}>{  item.letterText}</Text>}
-       
+        keyExtractor={item=>item.key}
        />
 
        
