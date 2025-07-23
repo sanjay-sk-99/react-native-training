@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const UseFetch = (url) => {
- 
+const useFetchData = (url) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => { 
+    fetchData(url);
+  }, []);
 
   const fetchData = async (url) => {
     try {
@@ -15,18 +18,15 @@ const UseFetch = (url) => {
       }
       const resdata = await res.json();
       setData(resdata);
-      setLoading(false)
+      setLoading(false);
     } catch (err) {
-      setLoading(false)
+      setLoading(false);
       console.log(err.message);
-      setError("Error fetching data : " + err.message)
+      setError("Error fetching data : " + err.message);
     }
   };
 
-  useEffect(()=>{
-     fetchData(url)
-  },[])
   return { data, error, loading };
 };
 
-export default UseFetch;
+export default useFetchData;
